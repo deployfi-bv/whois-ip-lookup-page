@@ -48,3 +48,41 @@
     overflow: hidden;
     width: 100%;
 }
+
+.image-arrow-container {
+    position: relative;
+    display: inline-block; /* Or 'block', depending on your layout */
+}
+
+.down-arrow {
+    position: fixed;
+    bottom: 20px; /* Adjust based on your preference */
+    right: calc(max((100vw - var(--container-width)) / 2 + 40px, 40px));
+    z-index: 1000;
+}
+
+.down-arrow::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Thickness of the tail */
+    height: 50%; /* Length of the tail */
+    background-color: red; /* Color */
+}
+
+.down-arrow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid red; /* Arrowhead */
+}
