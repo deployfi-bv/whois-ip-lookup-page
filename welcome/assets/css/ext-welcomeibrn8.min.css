@@ -69,7 +69,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 10px; /* Thickness of the tail */
-    height: 50%; /* Length of the tail */
+    height: calc(100vh / 2);
     background-color: red; /* Color */
 }
 
